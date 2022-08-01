@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+import { Card } from './card.jsx';
 import './App.css';
+import { useRef, useState } from 'react';
 
 function App() {
+  const ref = useRef()
+  const [pokemon, setpokemon] = useState("")
+
+
+
+  const handlepokemon = () => {
+    const pokemonSelected = ref.current.value
+    
+     setpokemon({pokemonSelected})
+  }
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <input  placeholder='ingresa el nombre' ref={ref} className='input'></input>
+      <button onClick={handlepokemon}>busca un pokemon!</button>
+      <Card  nombre ={pokemon} />
     </div>
   );
 }
 
 export default App;
+
