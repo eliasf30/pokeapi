@@ -15,7 +15,7 @@ export  function Card(props){
 const [data,setdata] = useState({})
 const [stats,setstats] = useState({})
 const [abilities,setabilities] = useState({})
-
+const names = []
 
 
 
@@ -24,13 +24,16 @@ const pokeurl ="https://pokeapi.co/api/v2/pokemon/"
 const pokemon = props.nombre
 const poke = Object.values(pokemon)
 
+/*let names =[data.name]
+let sortednames = names.sort();
+console.log(sortednames)*/
 
 
 
 
 
 const getpokemon = async() => {
-    console.log(`${pokeurl}${poke}`)
+    
     const {data} = await axios.get(`${pokeurl}${poke}`)
     const {stats} = await data?.stats
     const {abilities} = await data?.abilities
@@ -47,13 +50,15 @@ const getpokemon = async() => {
 
 useEffect(() => {
     getpokemon()
+    
+    
 },[props])
 
 
 
 
 
-
+  
 
     
 

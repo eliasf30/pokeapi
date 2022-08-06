@@ -33,11 +33,27 @@ body{
   font-size: 1.2em;
   font-weight: 500;
   font-family: italic;
+  cursor: pointer;
 }
 
 .input{
+  border: 1px solid rgb(178, 189, 30);
   height: 30px;
   border-radius: 2%;
   width: 50%;
   margin: auto;
-  }
+}
+  
+
+.autocompleteUL{
+
+  border: 1px solid rgb(178, 189, 30);
+  background-color: aliceblue;
+  border-radius: 2%;
+  width: 50%;
+  margin: auto;
+}
+
+.autocompleteUL li{
+  color: black;
+}
