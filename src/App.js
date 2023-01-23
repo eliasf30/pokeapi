@@ -2,7 +2,7 @@ import { Card } from './card.jsx';
 import './App.css';
 import { useRef, useState, useEffect } from 'react';
 import axios from 'axios';
-
+import { BsTrashFill } from 'react-icons/bs';
 
 
 function App() {
@@ -46,13 +46,16 @@ const arraynames = Object.values(names)
 
 const truearray = arraynames[0]
 
-console.log(truearray)
+
   
   
   return (
     <div className="App">
       <label className='label'></label>
+      <div>
       <input list='names' type="text" placeholder='Ingresa el nombre' ref={ref} className='input'></input>
+      <button onClick={() => {window.location.replace('')}} className='delete_button' disabled={pokemon === ""}><BsTrashFill  /></button>
+      </div>
       <datalist id='names' className='datalist'>
         {
          truearray?.map((name) => 
@@ -60,7 +63,7 @@ console.log(truearray)
         }
        
       </datalist>
-      <button className='button' onClick={handlepokemon}>Busca un pokemon!</button>
+      <button className='button' onClick={handlepokemon} >Busca un pokemon!</button>
       <Card  nombre ={pokemon} />
     </div>
   );

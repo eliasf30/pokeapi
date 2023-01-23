@@ -20,6 +20,8 @@ h3{
 .pokeImage{
     height: 100%;
     width: 100%;
+    margin: 10%;
+    border-radius: 5%;
 }
 
 li{
@@ -34,23 +36,7 @@ li{
 
 
 
-button{
-    color:rgb(72, 88, 224);
-    background: linear-gradient(90deg, rgb(251, 255, 15), rgb(248, 226, 27));
-    height: 40px;
-    font-size: 1.3em;
-    font-weight: 600;
-    
-    width: 25%;
-    margin: auto;
-    margin-top: 2%;
-    border: 1px solid rgb(178, 189, 30);
-    border-radius: 10%;
-    
-  
-    
-     cursor: pointer;
-}
+
 
 
 .input{

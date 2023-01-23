@@ -1,7 +1,7 @@
 import './card.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
+import WhatPokemon from "./images/pokemon.PNG"
 
 
 
@@ -60,25 +60,26 @@ useEffect(() => {
 
     return ( <div className="card">
                 <div>
-                    <img className = "pokeImage" src={data.image}></img>
+                  {(data.image)? <img className="pokeImage" src={data.image}/> : <img className="pokeImage" src={WhatPokemon}/> }  
                 </div>
                 <div>
-                    <h3>nombre</h3>
+                    <h3>Nombre:</h3>
                     <p>{data.ID} - {data.nombre}</p>
-                    <h4>altura</h4>
-                    <p>{data.height}</p>
-                    <h4>peso</h4>
+                    <h4>Altura:</h4>
+                    {(data.weight)? <p>{data.height}</p> : <p></p>}
+                    
+                    <h4>Peso</h4>
                     <p>{data.weight}</p>  
                 </div>
                 <div>
-                    <h3>"tipo"</h3>
+                    <h3>Tipo:</h3>
                     <ul className='type_ul'>
                         <li >{data.type}</li>
                         <li >{data.type2}</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>stats:</h3>
+                    <h3>Stats:</h3>
                     <ul>
                         <li>{stats.hp}</li>
                         <li>{stats.ataque}</li>
@@ -89,7 +90,7 @@ useEffect(() => {
                     </ul>
                 </div>
                 <div>
-                    <h3>habilidades</h3>
+                    <h3>Habilidades:</h3>
                     <ul>
                         <li>{abilities.ability1}</li>
                         <li>{abilities.ability2}</li>

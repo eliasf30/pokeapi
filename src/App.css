@@ -19,13 +19,29 @@ body{
   margin-right: auto;
   width: 15%;
   height: 50px;
-  background-color: rgb(161, 161, 194);
+  color: rgb(72, 88, 224); ;
+  background: linear-gradient(90deg, rgb(251, 255, 15), rgb(248, 226, 27));
   border: 1px solid black;
   border-radius: 10%;
   font-size: 1.2em;
   font-weight: 500;
   font-family: italic;
   cursor: pointer;
+}
+
+
+
+.button:hover{
+  
+  width: 16%;
+  height: 53px;
+  transition:  .3s;
+}
+
+.button:active{
+  width: 15%;
+  height: 50px;
+  transition:  .1s;
 }
 
 .input{
@@ -49,6 +65,24 @@ body{
   color: black;
 }
 
+.delete_button{
+  background: linear-gradient(90deg, rgb(251, 255, 15), rgb(248, 226, 27));
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 1%;
+  cursor: pointer;
+  color: black;
+}
+.delete_button:hover{
+  width: 43px;
+  height: 43px;
+  margin: .9%;
+  transition: .3s;
+  
+}
+
+
 @media (max-width: 900px) {
   .input{
     width: 80%;
@@ -61,5 +95,30 @@ body{
     width: 75%;
     height: 4vh;
   }
+  .button:hover{
   
+    width: 77%;
+    height: 53px;
+    transition:  .3s;
+  }
+  
+  .button:active{
+    width: 75%;
+    height: 50px;
+    transition:  .1s;
+  }
+  .delete_button{
+    background: linear-gradient(90deg, rgb(251, 255, 15), rgb(248, 226, 27));
+    border: 1px solid black;
+    width: 53px;
+    height: 53px;
+    margin: 1.2%;
+    cursor: pointer;
+    color: black;
+  }
+  .delete_button:hover{
+    width: 57px;
+    height: 57px;
+    transition: .3s;
+  }
 }
