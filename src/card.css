@@ -27,9 +27,12 @@ li{
   font-size: 1.3em;
   font-family: 'Times New Roman', Times, serif;
   display: flex;
-  flex-direction: column;
+  
+  align-items: center;
   color: rgb(72, 88, 224);
 }
+
+
 
 button{
     color:rgb(72, 88, 224);
@@ -57,3 +60,32 @@ button{
     width: 50%;
     margin: auto;
 }
+
+
+@media (max-width: 900px) {
+    .card{
+        background-color: rgba(240, 248, 255, 0.548);
+        margin-top: 3%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .card div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 25%;
+    }
+    .pokeImage{
+        height: 80%;
+        width: 80%;
+        object-fit: cover;
+        margin: 5%;
+    }
+    .type_ul{
+        margin-left: -40px;
+    }
+    
+  }

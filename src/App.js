@@ -53,14 +53,14 @@ console.log(truearray)
     <div className="App">
       <label className='label'></label>
       <input list='names' type="text" placeholder='Ingresa el nombre' ref={ref} className='input'></input>
-      <datalist id='names'>
+      <datalist id='names' className='datalist'>
         {
          truearray?.map((name) => 
          <option key={name} value={name}></option>)
         }
        
       </datalist>
-      <button onClick={handlepokemon}>Busca un pokemon!</button>
+      <button className='button' onClick={handlepokemon}>Busca un pokemon!</button>
       <Card  nombre ={pokemon} />
     </div>
   );

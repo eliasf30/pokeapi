@@ -24,10 +24,6 @@ const pokeurl ="https://pokeapi.co/api/v2/pokemon/"
 const pokemon = props.nombre
 const poke = Object.values(pokemon)
 
-/*let names =[data.name]
-let sortednames = names.sort();
-console.log(sortednames)*/
-
 
 
 
@@ -76,9 +72,9 @@ useEffect(() => {
                 </div>
                 <div>
                     <h3>"tipo"</h3>
-                    <ul>
-                        <li>{data.type}</li>
-                        <li>{data.type2}</li>
+                    <ul className='type_ul'>
+                        <li >{data.type}</li>
+                        <li >{data.type2}</li>
                     </ul>
                 </div>
                 <div>
